@@ -1,0 +1,933 @@
+/* -------------------- RESET BÁSICO E FONTES -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #39425D;
+    line-height: 1.6;
+    background-color: #FAFAFA;
+}
+
+/* CONTAINER PADRÃO: Limita o CONTEÚDO principal (menu, seções) e GARANTE A CENTRALIZAÇÃO */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* CENTRALIZAÇÃO GARANTIDA */
+    padding: 0 20px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos de Botões */
+.btn {
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-main {
+    background-color: #FF9900;
+    color: white;
+    box-shadow: 0 10px 20px rgba(255, 153, 0, 0.2);
+}
+
+.btn-main:hover {
+    background-color: #E68A00;
+}
+
+.btn-outline {
+    background: none;
+    border: 1px solid #39425D;
+    padding: 10px 25px;
+}
+
+.btn-outline:hover {
+    background-color: #39425D;
+    color: white;
+}
+
+/* -------------------- BARRA DE NAVEGAÇÃO -------------------- */
+/* Aplicamos a centralização aqui para garantir que a navegação (se estiver fora do .container)
+   siga o alinhamento central */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px; /* Mantém o padding lateral */
+    /* GARANTIA DE CENTRALIZAÇÃO PARA O HEADER */
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 900;
+    color: #080809;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu-links a {
+    font-weight: 500;
+    font-size: 17px;
+    color: #212832;
+    transition: color 0.2s;
+}
+
+.menu-links a:hover {
+    color: #FF9900;
+}
+
+.language-select {
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* -------------------- SEÇÃO PRINCIPAL (HERO) -------------------- */
+
+.hero {
+    font-family: "Libre Baskerville", serif;
+    padding: 40px 0 140px; 
+    position: relative;
+    overflow: hidden; 
+}
+
+/* O conteúdo interno (hero-content) deve usar o .container no HTML para centralização.
+   Mantemos os estilos de flexbox aqui para o layout interno de texto/imagem. */
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px; /* Espaçamento lateral */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Estilização da Forma Amarela de Fundo (OCUPA 50% DA TELA) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* Usa 50% da largura do viewport (tela) para ir até a borda */
+    width: 50vw; 
+    height: 100%;
+    background-color: #FFF1DA;
+    border-radius: 0 0 0 500px;
+    z-index: -1;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%; /* Garante que o texto ocupe metade da área de 1200px */
+    padding-top: 50px;
+}
+
+.tagline {
+    font-size: 18px;
+    font-weight: 700;
+    color: #DF6951; 
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #181E4B;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Efeito de destaque sublinhado na palavra */
+.title .highlight {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 200px; 
+    width: 250px;
+    height: 10px;
+    background-color: #DF6951;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #5E6282;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 80%;
+}
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-demo {
+    background: none;
+    color: #5E6282;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.play-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #DF6951;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.play-btn::before {
+    content: '▶';
+    color: white;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+/* Área da Imagem do Viajante (para posicionamento da imagem absoluta) */
+.hero-image-area {
+    flex: 1;
+    position: relative;
+    height: 700px; 
+    overflow: visible; 
+}
+
+/* Visual da Imagem do Viajante (usando a tag IMG) */
+.traveler-image {
+    position: absolute;
+    right: -100px; 
+    bottom: -50px;
+    width: 700px; 
+    height: auto;
+    max-width: none; 
+}
+
+/* Estilos dos Aviões Flutuantes */
+.airplane {
+    position: absolute;
+    font-size: 40px;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+
+.plane-one {
+    top: 150px;
+    right: 350px; 
+}
+
+.plane-two {
+    bottom: 100px;
+    right: 50px; 
+}
+
+/* ----------------------------------------------------------- */
+/* -------------------- ESTILOS GERAIS DE SEÇÕES -------------------- */
+/* ----------------------------------------------------------- */
+
+.section-heading {
+    font-size: 50px;
+    font-weight: 700;
+    color: #181E4B;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: 500;
+    color: #5E6282;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* -------------------- Seção de Serviços -------------------- */
+
+.services-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    color: #1E1D4C;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #5E6282;
+    line-height: 1.5;
+}
+
+.icon-placeholder {
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-weather { background-color: #F1A501; }
+.icon-flights { background-color: #F5E5F6; }
+.icon-events { background-color: #D1B36C; }
+.icon-custom { background-color: #7ED321; }
+
+/* Elemento de decoração para a carta ativa */
+.service-card.active::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: #DF6951; 
+    border-radius: 30px 0 10px 0;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* -------------------- Seção de Destinos -------------------- */
+
+.destinations-section {
+    padding: 50px 0 100px;
+    text-align: center;
+}
+
+.destinations-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.destination-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dest-image {
+    height: 320px;
+    overflow: hidden;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.dest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dest-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 10px;
+    font-size: 18px;
+    color: #5E6282;
+}
+
+.dest-price {
+    font-weight: 500;
+    color: #5E6282;
+}
+
+.dest-duration {
+    padding: 0 20px 20px;
+    font-size: 16px;
+    color: #5E6282;
+}
+
+/* -------------------- Seção de Processo e Testemunhos -------------------- */
+
+.process-testimonials-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+/* Estiliza o lado esquerdo (Passos) */
+.process-content {
+    flex-basis: 45%;
+    text-align: left;
+    margin-right: 5%;
+}
+
+.process-content .section-heading {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+
+.step-yellow { background-color: #F0BB1F; }
+.step-red { background-color: #F15A24; }
+.step-blue { background-color: #006380; }
+
+.step-text h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5E6282;
+}
+
+.step-text p {
+    font-size: 14px;
+    color: #5E6282;
+}
+
+/* Estiliza o lado direito (Card Flutuante da Viagem) */
+.trip-showcase {
+    flex-basis: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trip-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: relative;
+}
+
+.trip-image-placeholder {
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.trip-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.trip-card h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.people-going {
+    margin-top: 10px;
+    color: #5E6282;
+}
+
+.trip-mini-card {
+    position: absolute;
+    bottom: -50px;
+    right: -100px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    width: 250px;
+    opacity: 0.9;
+}
+
+.mini-icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Estilos de Testemunhos */
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.testimonial-text {
+    flex-basis: 45%;
+}
+
+.testimonial-text .section-heading {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    flex-basis: 50%;
+    position: relative;
+    padding-left: 50px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.testimonial-card .quote {
+    font-size: 16px;
+    color: #5E6282;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.client-name {
+    font-weight: 600;
+    color: #000;
+}
+
+.client-title {
+    font-size: 14px;
+    color: #5E6282;
+}
+
+
+/* Estilos de Logos de Parceiros */
+.partner-logos {
+    display: flex;
+    justify-content: space-around; /* espaça igualmente */
+    align-items: center;
+    margin-top: 40px;
+    gap: 40px; /* espaço entre logos */
+    flex-wrap: wrap; /* para quebrar linha em telas menores */
+}
+
+.logo-item {
+    max-height: 60px; /* aumenta a altura dos logos */
+    width: auto;
+    object-fit: contain; /* mantém proporção */
+    cursor: pointer; /* efeito cursor para logos */
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.1); /* leve zoom no hover */
+}
+
+
+/* Estilos de Assinatura (Subscribe) */
+.subscribe-box {
+    background-color: #F8F7FF; 
+    border-radius: 120px 20px 20px 20px;
+    padding: 80px 100px;
+    text-align: center;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.subscribe-box h2 {
+    font-size: 33px;
+    color: #5E6282;
+    font-weight: 600;
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 16px;
+    color: #39425D;
+}
+
+.btn-subscribe {
+    background-color: #FF9900;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+/* -------------------- Rodapé (Footer) -------------------- */
+
+footer {
+    padding: 50px 0 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-info {
+    max-width: 250px;
+}
+
+.footer-info .logo {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 13px;
+    color: #5E6282;
+}
+
+.footer-col h4 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #5E6282;
+    font-size: 17px;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #FF9900;
+}
+
+.footer-social {
+    align-items: center;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #5E6282;
+    text-decoration: none;
+}
+
+.footer-social p {
+    font-size: 12px;
+    color: #5E6282;
+    margin-bottom: 10px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.app-store-btn, .google-play-btn {
+    padding: 8px 12px;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #5E6282;
+    margin-top: 20px;
+}
+
+/* -------------------- Responsividade para Telas Menores -------------------- */
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 64px;
+    }
+    .hero-image-area {
+        right: 0;
+    }
+    .traveler-image {
+        right: -50px;
+        width: 600px;
+    }
+    .plane-one {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* O Header se torna de largura total, com padding e alinhado ao centro */
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+        max-width: 100%;
+    }
+
+    .menu-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 20px 0 50px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .hero::before {
+        height: 50%;
+        width: 100vw; 
+        border-radius: 0 0 0 100px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding-top: 0;
+        text-align: center;
+        order: 2;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .title .highlight {
+        display: none; 
+    }
+    
+    .subtitle {
+        max-width: 100%;
+    }
+
+    .cta-actions {
+        justify-content: center;
+    }
+
+    .hero-image-area {
+        height: 400px;
+        order: 1;
+        margin-bottom: 30px;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .traveler-image {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+
+    .plane-one, .plane-two {
+        display: none; 
+    }
+
+    /* Novas Seções */
+    .section-heading {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .services-grid, .destinations-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .service-card.active::before {
+        display: none;
+    }
+
+    .process-testimonials-section {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .process-content, .trip-showcase {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .process-content .section-heading {
+        text-align: center;
+    }
+
+    .step {
+        justify-content: center;
+    }
+
+    .trip-showcase {
+        order: -1;
+    }
+
+    .trip-card {
+        width: 100%;
+    }
+    .trip-mini-card {
+        bottom: -30px; 
+        right: 50%; 
+        transform: translateX(50%);
+    }
+
+    .testimonials {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    
+    .testimonial-text, .testimonial-slider {
+        flex-basis: 100%;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-text .section-heading {
+        text-align: center;
+    }
+    
+    .partner-logos {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .subscribe-box {
+        padding: 50px 30px;
+        border-radius: 50px 20px 20px 20px;
+    }
+
+    .subscribe-box h2 {
+        font-size: 24px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .subscribe-form input[type="email"], .btn-subscribe {
+        width: 100%;
+    }
+
+    .footer-grid {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+    
+    .footer-col {
+        flex-basis: 45%; 
+    }
+    
+    .footer-social {
+        flex-basis: 100%;
+        align-items: center;
+        justify-content: center;
+        order: -1; 
+    }
+    .social-icons {
+        margin: 15px auto;
+    }
+}

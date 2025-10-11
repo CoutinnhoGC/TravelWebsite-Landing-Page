@@ -3,40 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadoo - Travel Agency</title>
-    <!-- Mudei para style.css, pois o link do usuário era 'css/pg.css' -->
+    <title>Jadoo  Travel Agency</title>
     <link rel="stylesheet" href="css/pg.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Ícone de seta para baixo para o idioma -->
-    <style>
-        .language-select .arrow-down::after {
-            content: '▼';
-            font-size: 10px;
-            margin-left: 5px;
-            display: inline-block;
-        }
-    </style>
-    <!-- Adicionando smooth scroll no HTML para rolar suavemente entre as seções -->
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
+
 <body>
 
-    <!-- O HEADER usa o container para centralizar a barra de navegação -->
     <div class="container">
 
-        <!-- -------------------- Barra de Navegação -------------------- -->
         <header>
     <div class="logo">Jadoo</div>
-    <nav class="menu-links">
-        <!-- Links de navegação apontando para IDs de seção -->
-        <a href="#destinations-section">Destinations</a>
+    <nav class="menu-links ">
+        <a href="#destinos-section">Destinations</a>
         <a href="#">Hotels</a> 
         <a href="#">Flights</a>
-        <a href="#process-testimonials-section">Bookings</a>
+        <a href="#processo-testemunhos-section">Bookings</a>
         <a href="#">Login</a>
         <button class="btn btn-outline">Sign up</button>
         <div class="language-select">EN <span class="arrow-down"></span></div>
@@ -44,23 +26,20 @@
 </header>
     </div>
 
-    <!-- -------------------- Seção Principal (Hero) -------------------- -->
-    <!-- Esta seção não tem classe 'container' para permitir que o fundo ocupe 100% da tela -->
     <section class="hero">
-        <!-- O conteúdo interno centraliza o texto e a imagem -->
         <div class="hero-content">
             <div class="hero-text">
                 <p class="tagline">BEST DESTINATIONS AROUND THE WORLD</p>
-                <h1 class="title">
-                    Travel, enjoy <span class="highlight"></span>
+                <h1 class="titulo">
+                    Travel, enjoy <span class="destaque"></span>
                     and live a new <br>and full life
                 </h1>
-                <p class="subtitle">
+                <p class="subtitulo">
                     Built Wicket longer admire do barton vanity itself do in it.
                     Preferred to sportsmen it engrossed listening. Park gate
                     sell they west hard for the.
                 </p>
-                <div class="cta-actions">
+                <div class="cta-acoes">
                     <button class="btn btn-main">Find out more</button>
                     <button class="btn btn-demo">
                         <span class="play-btn"></span> Play Demo
@@ -69,39 +48,36 @@
             </div>
 
             <div class="hero-image-area">
-                <div class="airplane plane-one">✈️</div>
-                <div class="airplane plane-two">✈️</div>
-                <!-- Imagem do Viajante (Usando um placeholder para simular o visual) -->
+                <div class="aviao um">✈️</div>
+                <div class="aviao dois">✈️</div>
                 <img src="https://agentedeviagem.com/wp-content/uploads/2025/04/Imagem-Agente-de-Viagem-1-e1746034077541.png" alt="Viajante com mala e mochila" class="traveler-image">
             </div>
         </div>
     </section>
 
-    <!-- O restante do site volta a usar o .container para centralizar o conteúdo -->
     <div class="container">
 
-        <!-- -------------------- Seção de Serviços -------------------- -->
-        <section class="services-section">
-            <p class="category">CATEGORY</p>
-            <h2 class="section-heading">We Offer Best Services</h2>
+        <section class="servicos-section">
+            <p class="categoria">CATEGORY</p>
+            <h2 class="section-cabecalho">We Offer Best Services</h2>
 
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="servicos-grid">
+                <div class="servicos-card">
                     <div class="icon-placeholder icon-weather">☁️</div>
                     <h3>Calculated Weather</h3>
                     <p>Built Wicket longer admire do barton vanity itself do in it.</p>
                 </div>
-                <div class="service-card active">
+                <div class="servicos-card active">
                     <div class="icon-placeholder icon-flights">✈️</div>
                     <h3>Best Flights</h3>
                     <p>Engrossed listening. Park gate sell they west hard for the.</p>
                 </div>
-                <div class="service-card">
+                <div class="servicos-card">
                     <div class="icon-placeholder icon-events">📅</div>
                     <h3>Local Events</h3>
                     <p>Barton vanity itself do in it. Preferred to sportsmen it engrossed listening.</p>
                 </div>
-                <div class="service-card">
+                <div class="servicos-card">
                     <div class="icon-placeholder icon-custom">🛠️</div>
                     <h3>Customization</h3>
                     <p>We deliver outsourced aviation services for military customers</p>
@@ -109,56 +85,51 @@
             </div>
         </section>
 
-        <!-- -------------------- Seção de Destinos -------------------- -->
-        <!-- ID ADICIONADO AQUI -->
-        <section class="destinations-section" id="destinations-section">
-            <p class="category">Top Selling</p>
-            <h2 class="section-heading">Top Destinations</h2>
+        <section class="destinos-section" id="destinos-section">
+            <p class="categoria">Top Selling</p>
+            <h2 class="section-cabecalho">Top Destinations</h2>
 
-            <div class="destinations-grid">
-                <div class="destination-card">
+            <div class="destinos-grid">
+                <div class="destinos-card">
                     <div class="dest-image image-rome">
                         <img src="images/Roma.jpg" alt="Roma">
                     </div>
                     <div class="dest-info">
-                        <p class="dest-name">Rome, Italy</p>
-                        <p class="dest-price">$5,42k</p>
+                        <p class="dest-nome">Rome, Italy</p>
+                        <p class="dest-preco">$5,42k</p>
                     </div>
-                    <p class="dest-duration"><span>🗓️</span> 10 Days Trip</p>
+                    <p class="dest-duracao"><span>🗓️</span> 10 Days Trip</p>
                 </div>
 
-                <div class="destination-card">
+                <div class="destinos-card">
                     <div class="dest-image image-london">
                         <img src="images/London.jpg" alt="">
                     </div>
                     <div class="dest-info">
-                        <p class="dest-name">London, UK</p>
-                        <p class="dest-price">$4.2k</p>
+                        <p class="dest-nome">London, UK</p>
+                        <p class="dest-preco">$4.2k</p>
                     </div>
-                    <p class="dest-duration"><span>🗓️</span> 12 Days Trip</p>
+                    <p class="dest-duracao"><span>🗓️</span> 12 Days Trip</p>
                 </div>
 
-                <div class="destination-card">
+                <div class="destinos-card">
                     <div class="dest-image image-europe">
                         <img src="images/Full europe.jpg" alt="Europe">
                     </div>
                     <div class="dest-info">
-                        <p class="dest-name">Full Europe</p>
-                        <p class="dest-price">$15k</p>
+                        <p class="dest-nome">Full Europe</p>
+                        <p class="dest-preco">$15k</p>
                     </div>
-                    <p class="dest-duration"><span>🗓️</span> 28 Days Trip</p>
+                    <p class="dest-duracao"><span>🗓️</span> 28 Days Trip</p>
                 </div>
             </div>
         </section>
 
-        <!-- -------------------- Seção de Processo e Testemunhos -------------------- -->
-        <!-- ID ADICIONADO AQUI -->
-        <section class="process-testimonials-section" id="process-testimonials-section">
+        <section class="processo-testemunhos-section" id="processo-testemunhos-section">
             
-            <!-- Processo de Reserva (Lado Esquerdo) -->
-            <div class="process-content">
-                <p class="category">Easy and Fast</p>
-                <h2 class="section-heading">Book Your Next Trip in 3 Easy Steps</h2>
+            <div class="processo-content">
+                <p class="categoria">Easy and Fast</p>
+                <h2 class="section-cabecalho">Book Your Next Trip in 3 Easy Steps</h2>
 
                 <div class="step">
                     <div class="step-icon step-yellow">1️⃣</div>
@@ -182,49 +153,46 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Imagem Flutuante de Viagem (Lado Direito) -->
-            <div class="trip-showcase">
-                <div class="trip-card">
-                    <div class="trip-image-placeholder">
+        
+            <div class="viagem-showcase">
+                <div class="viagem-card">
+                    <div class="viagem-image-placeholder">
                         <img src="images/greece.jpg" alt="Greece">
                     </div>
                     <h4>Trip To Greece</h4>
                     <p>14-29 June | by Robin J</p>
-                    <p class="people-going">❤️ 34 people going</p>
-                    <div class="trip-mini-card">
+                    <p class="pessoas-indicadas">❤️ 34 people going</p>
+                    <div class="viagem-mini-card">
                         <div class="mini-icon">✈️</div>
                         <div>
                             <p class="mini-status">Ongoing</p>
-                            <p class="mini-trip-name">Trip to Rome</p>
-                            <div class="mini-progress"></div>
+                            <p class="mini-viagem-nome">Trip to Rome</p>
+                            <div class="mini-progresso"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Testemunhos e Logos -->
             <div style="width: 100%; display: block; margin-top: 100px;">
-                <div class="testimonials">
-                    <div class="testimonial-text">
-                        <p class="category">TESTIMONIALS</p>
-                        <h2 class="section-heading">What People Say About Us.</h2>
+                <div class="depoimentos">
+                    <div class="depoimentos-text">
+                        <p class="categoria">TESTIMONIALS</p>
+                        <h2 class="section-cabecalho">What People Say About Us.</h2>
                     </div>
-                    <div class="testimonial-slider">
-                        <div class="testimonial-card">
+                    <div class="depoimentos-slider">
+                        <div class="depoimentos-card">
                             <p class="quote">
                                 "On the Windows talking painted posture yet its
                                 express parties use. Sure last upon he same as
                                 knew next. Of believed or diverted no."
                             </p>
-                            <p class="client-name">Mike Taylor</p>
-                            <p class="client-title">Lahore, Pakistan</p>
+                            <p class="cliente-nome">Mike Taylor</p>
+                            <p class="cliente-titulo">Lahore, Pakistan</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Logos de Parceiros -->
-                <div class="partner-logos">
+                <div class="parceiros-logos">
                     <img src="images/axon-airlines-logo-png-transparent.png" alt="Axon" class="logo-item">
                     <img src="images/Jetstar-removebg-preview.png" alt="Jetstar" class="logo-item">
                     <img src="images/Expedia-removebg-preview.png" alt="Expedia" class="logo-item">
@@ -233,17 +201,15 @@
                 </div>
             </div>
             
-            <!-- Assinatura (Subscribe) -->
-            <div class="subscribe-box">
+            <div class="assinatura-box">
                 <h2>Subscribe to get information, latest news and other interesting offers about Jadoo</h2>
-                <form class="subscribe-form">
+                <form class="assinatura-form">
                     <input type="email" placeholder="✉️ Your email" required>
                     <button type="submit" class="btn btn-subscribe">Subscribe</button>
                 </form>
             </div>
         </section>
 
-        <!-- -------------------- Rodapé (Footer) -------------------- -->
         <footer>
             <div class="footer-grid">
                 <div class="footer-col footer-info">

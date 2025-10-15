@@ -40,9 +40,7 @@ a {
     box-shadow: 0 10px 20px rgba(255, 153, 0, 0.2);
 }
 
-.btn-main:hover {
-    background-color: #E68A00;
-}
+
 
 .btn-outline {
     background: none;
@@ -50,10 +48,7 @@ a {
     padding: 10px 25px;
 }
 
-.btn-outline:hover {
-    background-color: #39425D;
-    color: white;
-}
+
 
 header {
     display: flex;
@@ -81,10 +76,6 @@ header {
     font-size: 17px;
     color: #212832;
     transition: color 0.2s;
-}
-
-.menu-links a:hover {
-    color: #FF9900;
 }
 
 .language-select {
@@ -251,17 +242,11 @@ header {
     padding: 40px 20px;
     border-radius: 35px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
     flex: 1;
     position: relative;
     cursor: pointer;
 }
 
-.servicos-card:hover {
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
 
 .servicos-card h3 {
     font-size: 20px;
@@ -634,9 +619,7 @@ footer {
     transition: color 0.2s;
 }
 
-.footer-col a:hover {
-    color: #FF9900;
-}
+
 
 .footer-social {
     align-items: center;
